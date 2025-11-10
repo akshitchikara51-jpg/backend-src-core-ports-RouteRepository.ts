@@ -1,4 +1,3 @@
-// @ts-nocheck
 export interface Route {
   routeId: string;
   vesselType: string;
@@ -8,12 +7,10 @@ export interface Route {
   fuelConsumption: number;
   distance: number;
   totalEmissions: number;
-  isBaseline: boolean; // Missing from required data structure initially
+  isBaseline: boolean; 
 }
 
 export interface RouteRepository {
-  // Only the absolute minimum methods, incomplete
   findAllRoutes(): Promise<Route[]>;
   setBaseline(routeId: string): Promise<void>;
-  // Missing methods for comparison, data manipulation, etc.
-}
+ }
